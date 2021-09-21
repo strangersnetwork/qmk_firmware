@@ -127,4 +127,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define RGB_MATRIX_LED_PROCESS_LIMIT 15
 #define RGB_MATRIX_LED_FLUSH_LIMIT 10
 
+/* Adding Combo Count */
+//#define COMBO_COUNT 1
+
 #include "config_led.h"
