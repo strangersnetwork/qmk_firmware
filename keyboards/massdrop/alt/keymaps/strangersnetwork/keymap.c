@@ -1,3 +1,6 @@
+// strangersnetwork MassDrop Alt keymap
+// Last update: 202210081104
+
 #include QMK_KEYBOARD_H
 
 enum alt_keycodes {
@@ -9,6 +12,14 @@ enum alt_keycodes {
     DBG_MOU,               //DEBUG Toggle Mouse Prints
     MD_BOOT,               //Restart into bootloader after hold timeout
 };
+
+/* physical layout
+ * [ ` ]  [ 1 ]  [ 2 ]  [ 3 ]  [ 4 ]  [ 5 ]  [ 6 ]  [ 7 ]  [ 8 ]  [ 9 ]  [ 0 ]  [ - ]  [ = ]  [ bksp ] [ del ]
+ * [ tab* ]  [ q ]  [ w ]  [ e ]  [ r ]  [ t ]  [ y ]  [ u ]  [ i ]  [ o ]  [ p ]  [ [ ]  [ ] ]  [ home ]
+ * [ ctrl* ]  [ a ]  [ s ]  [ d ]  [ f ]  [ g ]  [ h ]  [ j ]  [ k ]  [ l ]  [ ; ]  [ ' ]  [ enter ]  [ PgUp ]
+ * [ lshift* ]  [ z ]  [ x ]  [ c ]  [ v ]  [ b ]  [ n ]  [ m ]  [ , ]  [ . ]  [ / ]  [ rshift* ] ]  [ ↑ ]  [ PgDn ]
+ * [ ctrl ]  [ alt ]  [ meta ]  [              spaaaaaaaace             ]  [ meta ]  [ alt ]  [ ← ]  [ ↓ ]  [ → ]
+ */
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     
@@ -32,11 +43,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     
     // Function layer
     [2] = LAYOUT_65_ansi_blocker(
-        KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  _______, KC_MUTE, \
-        _______, RGB_SPD, RGB_VAI, RGB_SPI, RGB_HUI, RGB_SAI, _______, U_T_AUTO,U_T_AGCR,_______, KC_PSCR, KC_SLCK, KC_PAUS, _______, KC_END, \
-        _______, RGB_RMOD,RGB_VAD, RGB_MOD, RGB_HUD, RGB_SAD, _______, _______, _______, _______, _______, _______,          _______, KC_VOLU, \
-        TO(0),   RGB_TOG, _______, _______, _______, MD_BOOT, NK_TOGG, DBG_TOG, KC_MPRV, KC_MNXT, KC_MPLY, _______,          KC_PGUP, KC_VOLD, \
-        TO(1),   _______, _______,                            _______,                            _______, _______, KC_HOME, KC_PGDN, KC_END  \
+        KC_GRV,  KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,  KC_PSCR, KC_INS,  \
+        _______, RGB_SPD, RGB_VAI, RGB_SPI, RGB_HUI, RGB_SAI, _______, U_T_AUTO,U_T_AGCR,_______, _______, KC_SCRL, KC_PAUS, _______, KC_MUTE, \
+        _______, RGB_RMOD,RGB_VAD, RGB_MOD, RGB_HUD, RGB_SAD, _______, _______, _______, _______, _______, _______,          _______, KC_MSTP, \
+        TO(0),   RGB_TOG, _______, _______, _______, MD_BOOT, NK_TOGG, DBG_TOG, _______, _______, _______, _______,          KC_VOLU, KC_MPLY, \
+        TO(1),   _______, _______,                            _______,                            _______, _______, KC_MPRV, KC_VOLD, KC_MNXT  \
     ),
 
     /*
