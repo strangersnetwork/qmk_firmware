@@ -2,8 +2,8 @@
 
 #define FORCE_NKRO
 
-#define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_GRADIENT_UP_DOWN  	// Sets the default mode, if none has been set
-#define RGB_MATRIX_STARTUP_HUE 180  //purple  alphas with green background when pressed.
+#define RGB_MATRIX_STARTUP_MODE RGB_MATRIX_CYCLE_UP_DOWN  	// Sets the default mode, if none has been set
+// #define RGB_MATRIX_STARTUP_HUE 180  //purple  alphas with green background when pressed.
 #define RGB_MATRIX_STARTUP_SPD 0
 
 /*
